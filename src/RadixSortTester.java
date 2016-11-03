@@ -8,6 +8,7 @@ public class RadixSortTester {
 		int[] sorted = new int[30];
 		int[] temp = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 		
+		//Generate Random ints to fill array and print out to console
 		for(int i = 0; i < unsorted.length; i++){
 			unsorted[i] = rand.nextInt(1000);
 			if(i < unsorted.length - 1){
@@ -17,23 +18,12 @@ public class RadixSortTester {
 				System.out.print(unsorted[i]);
 			}
 		}
-		
 		System.out.println();
 		
+		//Count how many of each number have certain i digit in one's place
 		for(int i = 0; i < unsorted.length; i++){
 			temp[unsorted[i]%10] += 1;
 		}
-		
-		for(int i = 0; i < temp.length; i++){
-			if(i < temp.length - 1){
-				System.out.print(temp[i] + ", ");
-			}
-			else{
-				System.out.print(temp[i]);
-			}
-		}
-		
-		System.out.println();
 		
 		for(int i = 0; i < temp.length; i++){
 			if(i > 0){
@@ -41,24 +31,14 @@ public class RadixSortTester {
 			}
 			
 		}
-		
-		for(int i = 0; i < temp.length; i++){
-			if(i < temp.length - 1){
-				System.out.print(temp[i] + ", ");
-			}
-			else{
-				System.out.print(temp[i]);
-			}
-		}
-		
 
-		System.out.println();
-		
+		//Sort only one's place
 		for(int i = unsorted.length - 1; i >= 0; i--){
-			temp[unsorted[i]%10] = temp[unsorted[i]%10] - 1;
+			temp[unsorted[i]%10] -= 1;
 			sorted[temp[unsorted[i]%10]] = unsorted[i];
 		}
 		
+		//Display sorted one's place to console
 		for(int i = 0; i < sorted.length; i++){
 			if(i < sorted.length - 1){
 				System.out.print(sorted[i] + ", ");
@@ -67,6 +47,10 @@ public class RadixSortTester {
 				System.out.print(sorted[i]);
 			}
 		}
+		
+		System.out.println();
+		
+		
 
 	}
 
