@@ -52,18 +52,21 @@ public class RadixSortTester {
 		}
 		
 
+		System.out.println();
 		
-		/*
 		for(int i = unsorted.length - 1; i >= 0; i--){
+			temp[unsorted[i]%10] = temp[unsorted[i]%10] - 1;
 			sorted[temp[unsorted[i]%10]] = unsorted[i];
-			if(i < unsorted.length - 1){
+		}
+		
+		for(int i = 0; i < sorted.length; i++){
+			if(i < sorted.length - 1){
 				System.out.print(sorted[i] + ", ");
 			}
 			else{
 				System.out.print(sorted[i]);
 			}
 		}
-		*/
 
 	}
 
