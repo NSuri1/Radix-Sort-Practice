@@ -4,7 +4,7 @@ import java.util.Random;
 public class RadixSortTester {
 
 	public static void main(String[] args) {
-		final int ARRAY_SIZE = 100000;
+		final int ARRAY_SIZE = 100000000;
 		int[] toSort = new int[ARRAY_SIZE];
 		Random rand = new Random();
 		int upperBound = 100000;
