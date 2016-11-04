@@ -1,7 +1,7 @@
 
 public class RadixSort {
 
-	public void sort(int[] toSort, int largestDigit) {
+	public static void sort(int[] toSort, int largestDigit) {
 		int counter = 0;
 		int divisor = 1;
 		int[] sorted = new int[toSort.length];
